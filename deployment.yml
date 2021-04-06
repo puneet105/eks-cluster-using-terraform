@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: rest-api
+  template:
+    metadata:
+      labels:
+        name: rest-api
+    spec:
+      containers:
+      - name: golang-api
+        image: amarya/lcm-api:1
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            memory: 2Gi
+            cpu: "2"
+          requests:
+            memory: 1Gi
+            cpu: "1"
+        #restartPolicy: OnFailure
+        ports:
+          - containerPort: 9005
