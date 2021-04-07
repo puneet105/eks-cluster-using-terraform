@@ -12,7 +12,12 @@
 	sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 	sudo apt-get update && sudo apt-get install terraform
 ```
-
+### Install awscli on your machine
+```
+sudo apt-get update -y
+sudo apt-get install awscli -y
+aws --version
+```
 ### Configure aws cli
 ```
 		aws configure
@@ -92,13 +97,3 @@ kubectl get namespaces
 kubectl get nodes -o wide
 kubectl get pods -o wide
 ```
-   
-
-	
-	
-	
-	
-	 
-
-	
-
