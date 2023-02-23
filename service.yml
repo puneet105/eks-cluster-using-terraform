@@ -14,4 +14,4 @@ spec:
     targetPort: 9005
     #nodePort: 30935
   selector:
-    name: rest-api
+    name: <LABEL_NAME>

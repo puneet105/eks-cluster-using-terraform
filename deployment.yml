@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rest-api
+  name: <DEPLOYMENT_NAME>
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: rest-api
+      name: <LABEL_NAME>
   template:
     metadata:
       labels:
-        name: rest-api
+        name: <LABEL_NAME>
     spec:
       containers:
-      - name: golang-api
-        image: amarya/lcm-api:1
+      - name: <CONTAINER_NAME>
+        image: <IMAGE_NAME:TAG>
         imagePullPolicy: IfNotPresent
         resources:
           limits:
